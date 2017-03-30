@@ -12,9 +12,7 @@ void push(struct bst **tree, int number) {
 
     if (*tree == NULL) {
         *tree = new_node;
-    }
-    else
-    {
+    } else {
         if (number < (*tree)->number) {
             push(&(*tree)->left, number);
         } else if (number >= (*tree)->number) {
