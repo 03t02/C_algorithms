@@ -29,7 +29,7 @@ We have an array of number `int nbr[3] = {5, 4, 8, 1};`
 * Our tree is empty, so 5 is the root node.
 
 ```
-			[5]
+            [5]
 ```
 
 ###### And we gonna try to to insert number 4 in our tree.
@@ -42,10 +42,10 @@ We have an array of number `int nbr[3] = {5, 4, 8, 1};`
 * So we insert 4 value to the root's left node.
 
 ```
-			[5]
-		   /
-		  /
-	    [4]
+           [5]
+           /
+          /
+        [4]
 ```
 ###### And we gonna try to to insert number 8 in our tree.
 
@@ -57,10 +57,10 @@ We have an array of number `int nbr[3] = {5, 4, 8, 1};`
 * So we insert 8 value to the root's right node.
 
 ```
-			[5]
-		   /  \
-		  /    \
-	    [4]    [8]
+           [5]
+           / \
+          /   \
+        [4]    [8]
 ```
 
 ###### And finallt, we gonna try to to insert number 1 in our tree.
@@ -79,13 +79,13 @@ We have an array of number `int nbr[3] = {5, 4, 8, 1};`
 
 
 ```
-			[5]
-		   /  \
-		  /    \
-	    [4]    [8]
-	   /
-	  /
-	[1]
+          [5]
+          / \
+         /   \
+       [4]    [8]
+       /
+      /
+    [1]
 ```
 
 ##### C implementation
