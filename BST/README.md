@@ -21,14 +21,14 @@ Each node of the tree can only have maximum **2** childrens.
 | **Search** | O(1)      | O(log n)     | O(n)       |
 
 ## TODO
-[X] Insert
+- [X] Insert
 
-[X] Search
+- [X] Search
 
-[ ] Delete
+- [ ] Delete
 
-[ ] In order traversal
+- [ ] In order traversal
 
-[ ] Pre order traversal
+- [ ] Pre order traversal
 
-[ ] Post order traversal
+- [ ] Post order traversal
