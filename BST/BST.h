@@ -5,3 +5,4 @@ struct bst {
 } bst;
 
 void push(struct bst **tree, int number);
+struct bst *search(struct bst *tree, int number);

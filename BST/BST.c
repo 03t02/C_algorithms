@@ -23,3 +23,12 @@ void push(struct bst **tree, int number) {
     }
 }
 
+struct bst *search(struct bst *tree, int number) {
+    if (tree->number == number) {
+        return tree;
+    } else if (number < tree->number) {
+        return search(tree->left, number);
+    }
+    return search(tree->right, number);
+}
+
