@@ -1,19 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "BST.h"
 
 int main() {
     struct bst *tree = NULL;
+    struct bst *found_node = malloc(sizeof(*found_node));
 
-    push(&tree, 6);
-    push(&tree, 4);
-    push(&tree, 9);
-    push(&tree, 5);
+    int nbr[10] = {54, 65 ,87 ,23, 53, 32, 13, 53, 98, 34};
 
-    printf("%d\n", tree->number);
-    printf("%d\n", tree->left->number);
-    printf("%d\n", tree->right->number);
-    printf("%d\n", tree->left->right->number);
+    for (int i = 0; i < 10; ++i) {
+        push(&tree, nbr[i]);
+    }
 
+    found_node = search(tree, 53);
+    printf("%d\n", found_node->number);
+    printf("%d\n", found_node->left->number);
+    printf("%d\n", found_node->right->number);
     return 0;
 }
