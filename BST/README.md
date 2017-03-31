@@ -19,7 +19,7 @@ struct bst {
 } bst;
 ```
 
-# Insertion
+# Insert
 When we insert a new value in the tree, we compare the current value to the root value, if the current value is smaller than the root value, then we move to the left node, if the current value is bigger than the root value, then we move to the right node.
 
 We have an array of number `int nbr[4] = {5, 4, 8, 1};`
@@ -63,7 +63,7 @@ We have an array of number `int nbr[4] = {5, 4, 8, 1};`
         [4]    [8]
 ```
 
-###### And finallt, we gonna try to to insert number 1 in our tree.
+###### And finally, we gonna try to to insert number 1 in our tree.
 
 * We compare 1 with the root's value (5).
 * 1 < 5.
@@ -112,9 +112,32 @@ void push(struct bst **tree, int number) {
 ```
 
 
-# Deletion
+# Delete
 
 # Search
+Let's take the list in our `insert` example: `int nbr[4] = {5, 4, 8, 1};`
+
+We want to find the number `1`.
+
+* 1 < 5
+* Move to the left node.
+* 1 < 4
+* Move to the left node again.
+* 1 = 1
+* Found it.
+
+##### C implementation
+
+```C
+struct bst *search(struct bst *tree, int number) {
+    if (tree->number == number) {
+        return tree;
+    } else if (number < tree->number) {
+        return search(tree->left, number);
+    }
+    return search(tree->right, number);
+}
+```
 
 # The complexity in Big O Notation
 ###### Time Complexity
