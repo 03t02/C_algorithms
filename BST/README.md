@@ -22,7 +22,7 @@ struct bst {
 # Insertion
 When we insert a new value in the tree, we compare the current value to the root value, if the current value is smaller than the root value, then we move to the left node, if the current value is bigger than the root value, then we move to the right node.
 
-We have an array of number `int nbr[3] = {5, 4, 8, 1};`
+We have an array of number `int nbr[4] = {5, 4, 8, 1};`
 
 ###### Now we gonna try to to insert number 5 in our tree.
 
