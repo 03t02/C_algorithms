@@ -15,5 +15,8 @@ int main() {
     if (node != NULL) {
         printf("Pop element: %d\n", node->number);
     }
+
+    struct stack *found = search(list, 3);
+    printf("Found: %d\n", found->number);
     return 0;
 }

@@ -39,3 +39,13 @@ void printStack(struct stack *list) {
     }
 }
 
+struct stack *search(struct stack *list, int number) {
+    if (list == NULL) {
+        return NULL;
+    }
+
+    if (list->number == number) {
+        return list;
+    }
+    return search(list->next, number);
+}
