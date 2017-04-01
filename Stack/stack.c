@@ -12,24 +12,19 @@ void push(struct stack **list, int number) {
     if (*list == NULL) {
         *list = new_node;
     } else {
-        struct stack *it = *list;
-
-        while (it->next != NULL) {
-            it = it->next;
-        }
-        it->next = new_node;
+        new_node->next = *list;
+        *list = new_node;
     }
 }
 
 struct stack *pop(struct stack **list) {
-    struct stack *it = *list;
-    struct stack *node = NULL;
-
-    while (it->next != NULL && it->next->next != NULL) {
-        it = it->next;
+    if (list == NULL) {
+        return NULL;
     }
-    node = it->next;
-    it->next = NULL;
+    struct stack *node = *list;
+    struct stack *head = (*list)->next;
+    (*list)->next = NULL;
+    *list = head;
     return node;
 }
 
