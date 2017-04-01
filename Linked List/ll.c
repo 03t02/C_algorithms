@@ -12,10 +12,11 @@ void insertTail(struct ll **list, int number) {
     if (*list == NULL) {
         *list = new_node;
     } else {
-        while ((*list)->next != NULL) {
-            *list = (*list)->next;
+        struct ll *it = *list;
+        while (it->next != NULL) {
+            it = it->next;
         }
-        (*list)->next = new_node;
+        it->next= new_node;
     }
 }
 
