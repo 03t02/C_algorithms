@@ -51,10 +51,10 @@ void deleteHead(struct ll **list) {
 void deleteTail(struct ll **list) {
     struct ll *it = *list;
 
-    while (it->next != NULL && it->next->next != NULL) {
+    while (it->next != NULL) {
         it = it->next;
     }
-    it->next = NULL;
+    it->prev->next = NULL;
 }
 
 struct ll *searchNode(struct ll *list, int number) {

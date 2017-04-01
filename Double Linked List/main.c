@@ -11,6 +11,8 @@ int main() {
     insertHead(&list, 4);
     insertHead(&list, 3);
 
+    deleteTail(&list);
+
     found_node = searchNode(list, 4);
     if (found_node != 0x0) {
         printf("Found: %d\n", found_node->number);
