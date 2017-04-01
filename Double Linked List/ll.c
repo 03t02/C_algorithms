@@ -17,7 +17,6 @@ void insertTail(struct ll **list, int number) {
         while (it->next != NULL) {
             it = it->next;
         }
-        new_node->prev = malloc(sizeof(*(new_node->prev)));
         new_node->prev = it;
         it->next= new_node;
     }
