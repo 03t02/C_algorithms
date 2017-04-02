@@ -119,3 +119,38 @@ struct ll *searchNode(struct ll *list, int number) {
 | **Delete**      | O(n)         | O(n)       |
 | **Insert head** | O(1)         | O(1)       |
 | **Delete head** | O(1)         | O(1)       |
+
+
+# Example
+```C
+int main() {
+    struct ll *list = NULL;
+    struct ll *found_node = NULL;
+
+    insertTail(&list, 5);
+    insertTail(&list, 8);
+    insertHead(&list, 4);
+    insertHead(&list, 3);
+    insertTail(&list, 29);
+    insertTail(&list, 54);
+
+    deleteHead(&list);
+    deleteTail(&list);
+
+    found_node = searchNode(list, 4);
+    if (found_node != 0x0) {
+        printf("Found: %d\n", found_node->number);
+    }
+    printList(list);
+    return 0;
+}
+```
+
+###### Output
+```C
+Found: 4
+4
+5
+8
+29
+```
