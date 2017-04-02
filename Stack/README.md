@@ -1,6 +1,6 @@
 # Stack
 
-**Stack** is a data structure very similar to an *array*, but this one has a limited functionality. With a stack, you can only push an item at the end of the stack. And you can only remove the last item of the stack.
+**Stack** is a data structure very similar to an *array*, but this one has a limited functionality. With a stack, you can only push an item at the beginning of the stack. And you can only remove the first item of the stack.
 
 **Example:** We have an empty stack here, we call it `newStack`.
 
@@ -15,11 +15,11 @@ push(newStack, 3);
 push(newStack, 4);
 push(newStack, 5);
 push(newStack, 6);
-// Here what our newStack looks like. [1, 2, 3, 4, 5, 6]
+// Here what our newStack looks like. [6, 5, 4, 3, 2, 1]
 
 
 pop(newStack);
-// Here what our newStack looks like. [1, 2, 3, 4, 5]
+// Here what our newStack looks like. [5, 4, 3, 2, 1]
 ```
 
 # Insert
