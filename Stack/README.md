@@ -98,3 +98,33 @@ struct stack *search(struct stack *list, int number) {
 | **Search** | O(n)         | O(n)       |
 | **Insert** | O(1)         | O(1)       |
 | **Delete** | O(1)         | O(1)       |
+
+# Example
+```C
+int main() {
+    struct stack *list = NULL;
+
+    push(&list, 1);
+    push(&list, 2);
+    push(&list, 3);
+    push(&list, 4);
+
+    struct stack *node = pop(&list);
+    printStack(list);
+    if (node != NULL) {
+        printf("Pop element: %d\n", node->number);
+    }
+
+    struct stack *found = search(list, 3);
+    printf("Found: %d\n", found->number);
+    return 0;
+}
+```
+###### Output
+```C
+3
+2
+1
+Pop element: 4
+Found: 3
+```
