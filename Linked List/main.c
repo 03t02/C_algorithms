@@ -4,12 +4,14 @@
 
 int main() {
     struct ll *list = NULL;
-    struct ll *found_node = malloc(sizeof(*found_node));
+    struct ll *found_node = NULL;
 
     insertTail(&list, 5);
     insertTail(&list, 8);
     insertHead(&list, 4);
     insertHead(&list, 3);
+    insertTail(&list, 29);
+    insertTail(&list, 54);
 
     deleteHead(&list);
     deleteTail(&list);
