@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "BST.h"
 
-void push(struct bst **tree, int number) {
-    struct bst *new_node = NULL;
+void push(t_bst **tree, int number) {
+    t_bst *new_node = NULL;
 
     new_node = malloc(sizeof(*new_node));
     new_node->number = number;
@@ -21,7 +21,7 @@ void push(struct bst **tree, int number) {
     }
 }
 
-struct bst *search(struct bst *tree, int number) {
+t_bst *search(t_bst *tree, int number) {
     if (tree->number == number) {
         return tree;
     } else if (number < tree->number) {

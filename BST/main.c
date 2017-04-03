@@ -4,8 +4,8 @@
 #include "BST.h"
 
 int main() {
-    struct bst *tree = NULL;
-    struct bst *found_node = malloc(sizeof(*found_node));
+    t_bst *tree = NULL;
+    t_bst *found_node = malloc(sizeof(*found_node));
 
     int nbr[12] = {54, 65 ,87 ,23, 77, 32, 13, 53, 98, 34, 84, 91};
 

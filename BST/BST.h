@@ -1,8 +1,8 @@
-struct bst {
+typedef struct bst {
     int number;
     struct bst *left;
     struct bst *right;
-} bst;
+} t_bst;
 
-void push(struct bst **tree, int number);
-struct bst *search(struct bst *tree, int number);
+void push(t_bst **tree, int number);
+t_bst *search(t_bst *tree, int number);
