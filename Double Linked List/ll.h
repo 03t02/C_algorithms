@@ -1,14 +1,14 @@
-struct ll {
+typedef struct ll {
     int number;
     struct ll *next;
     struct ll *prev;
-} ll;
+} t_ll;
 
-void insertTail(struct ll **list, int number);
-void insertHead(struct ll **list, int number);
-void deleteHead(struct ll **list);
-void deleteNode(struct ll *list, int number);
-void deleteTail(struct ll **list);
-void printList(struct ll *list);
+void insertTail(t_ll **list, int number);
+void insertHead(t_ll **list, int number);
+void deleteHead(t_ll **list);
+void deleteNode(t_ll *list, int number);
+void deleteTail(t_ll **list);
+void printList(t_ll *list);
 
-struct ll *searchNode(struct ll *list, int number);
+t_ll *searchNode(t_ll *list, int number);

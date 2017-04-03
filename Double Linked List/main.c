@@ -3,8 +3,8 @@
 #include "ll.h"
 
 int main() {
-    struct ll *list = NULL;
-    struct ll *found_node = malloc(sizeof(*found_node));
+    t_ll *list = NULL;
+    t_ll *found_node = malloc(sizeof(*found_node));
 
     insertTail(&list, 5);
     insertTail(&list, 8);
