@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "ll.h"
 
-void insertTail(struct ll **list, int number) {
-    struct ll *new_node = NULL;
+void insertTail(t_ll **list, int number) {
+    t_ll *new_node = NULL;
 
     new_node = malloc(sizeof(*new_node));
     new_node->number = number;
@@ -12,7 +12,7 @@ void insertTail(struct ll **list, int number) {
     if (*list == NULL) {
         *list = new_node;
     } else {
-        struct ll *it = *list;
+        t_ll *it = *list;
         while (it->next != NULL) {
             it = it->next;
         }
@@ -20,8 +20,8 @@ void insertTail(struct ll **list, int number) {
     }
 }
 
-void insertHead(struct ll **list, int number) {
-    struct ll *new_node = NULL;
+void insertHead(t_ll **list, int number) {
+    t_ll *new_node = NULL;
 
     new_node = malloc(sizeof(*new_node));
     new_node->number = number;
@@ -35,15 +35,15 @@ void insertHead(struct ll **list, int number) {
     }
 }
 
-void deleteHead(struct ll **list) {
-    struct ll *head = (*list)->next;
+void deleteHead(t_ll **list) {
+    t_ll *head = (*list)->next;
 
     (*list)->next = NULL;
     *list = head;
 }
 
-void deleteTail(struct ll **list) {
-    struct ll *it = *list;
+void deleteTail(t_ll **list) {
+    t_ll *it = *list;
 
     while (it->next != NULL && it->next->next != NULL) {
         it = it->next;
@@ -51,7 +51,7 @@ void deleteTail(struct ll **list) {
     it->next = NULL;
 }
 
-struct ll *searchNode(struct ll *list, int number) {
+t_ll *searchNode(t_ll *list, int number) {
     if (list == NULL) {
         return NULL;
     }
@@ -61,7 +61,7 @@ struct ll *searchNode(struct ll *list, int number) {
     return searchNode(list->next, number);
 }
 
-void printList(struct ll *list) {
+void printList(t_ll *list) {
     if (list == NULL) {
         printf("The list is empty\n");
         exit(1);
