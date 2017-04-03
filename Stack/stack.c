@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "stack.h"
 
-void push(struct stack **list, int number) {
-    struct stack *new_node = NULL;
+void push(t_stack **list, int number) {
+    t_stack *new_node = NULL;
 
     new_node = malloc(sizeof(*new_node));
     new_node->number = number;
@@ -17,18 +17,18 @@ void push(struct stack **list, int number) {
     }
 }
 
-struct stack *pop(struct stack **list) {
+t_stack *pop(t_stack **list) {
     if (list == NULL) {
         return NULL;
     }
-    struct stack *node = *list;
-    struct stack *head = (*list)->next;
+    t_stack *node = *list;
+    t_stack *head = (*list)->next;
     (*list)->next = NULL;
     *list = head;
     return node;
 }
 
-void printStack(struct stack *list) {
+void printStack(t_stack *list) {
     if (list == NULL) {
         printf("The stack is empty\n");
         exit(0);
@@ -39,7 +39,7 @@ void printStack(struct stack *list) {
     }
 }
 
-struct stack *search(struct stack *list, int number) {
+t_stack *search(t_stack *list, int number) {
     if (list == NULL) {
         return NULL;
     }

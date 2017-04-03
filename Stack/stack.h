@@ -1,10 +1,10 @@
-struct stack {
+typedef struct stack {
     int number;
     struct stack *next;
-} stack;
+} t_stack;
 
-void push(struct stack **list, int number);
-void printStack(struct stack *list);
-struct stack *pop(struct stack **list);
-struct stack *search(struct stack *list, int number);
+void push(t_stack **list, int number);
+void printStack(t_stack *list);
+struct stack *pop(t_stack **list);
+struct stack *search(t_stack *list, int number);
 

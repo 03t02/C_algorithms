@@ -3,20 +3,20 @@
 #include "stack.h"
 
 int main() {
-    struct stack *list = NULL;
+    t_stack *list = NULL;
 
     push(&list, 1);
     push(&list, 2);
     push(&list, 3);
     push(&list, 4);
 
-    struct stack *node = pop(&list);
+    t_stack *node = pop(&list);
     printStack(list);
     if (node != NULL) {
         printf("Pop element: %d\n", node->number);
     }
 
-    struct stack *found = search(list, 3);
+    t_stack *found = search(list, 3);
     printf("Found: %d\n", found->number);
     return 0;
 }
