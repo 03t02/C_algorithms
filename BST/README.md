@@ -111,9 +111,6 @@ void push(struct bst **tree, int number) {
 }
 ```
 
-
-# Delete
-
 # Search
 Let's take the list in our `insert` example: `int nbr[4] = {5, 4, 8, 1};`
 
@@ -147,15 +144,39 @@ struct bst *search(struct bst *tree, int number) {
 | **Delete** | O(1)      | O(log n)     | O(n)       |
 | **Search** | O(1)      | O(log n)     | O(n)       |
 
-## TODO
-- [X] Insert
+# Example
+```C
+int main() {
+    t_bst *tree = NULL;
+    t_bst *found_node = malloc(sizeof(*found_node));
 
-- [X] Search
+    int nbr[12] = {54, 65 ,87 ,23, 77, 32, 13, 53, 98, 34, 84, 91};
 
-- [ ] Delete
+    for (int i = 0; i < 12; ++i) {
+        push(&tree, nbr[i]);
+    }
 
-- [ ] In order traversal
+    found_node = search(tree, 91);
+    printf("%d\n", found_node->number);
+    printf("\n===============\n");
+    inOrderTraversal(tree);
+    printf("\n===============\n");
+    preOrderTraversal(tree);
+    printf("\n===============\n");
+    postOrderTraversal(tree);
+    printf("\n");
+    return 0;
+}
+```
 
-- [ ] Pre order traversal
+###### Output
+```C
+91
 
-- [ ] Post order traversal
+===============
+13 23 32 34 53 54 65 77 84 87 91 98
+===============
+54 23 13 32 53 34 65 87 77 84 98 91
+===============
+13 34 53 32 23 84 77 91 98 87 65 54
+```
