@@ -15,5 +15,12 @@ int main() {
 
     found_node = search(tree, 91);
     printf("%d\n", found_node->number);
+    printf("\n===============\n");
+    inOrderTraversal(tree);
+    printf("\n===============\n");
+    preOrderTraversal(tree);
+    printf("\n===============\n");
+    postOrderTraversal(tree);
+    printf("\n");
     return 0;
 }

@@ -21,6 +21,30 @@ void push(t_bst **tree, int number) {
     }
 }
 
+void inOrderTraversal(t_bst *tree) {
+    if (tree != NULL) {
+        inOrderTraversal(tree->left);
+        printf("%d ", tree->number);
+        inOrderTraversal(tree->right);
+    }
+}
+
+void preOrderTraversal(t_bst *tree) {
+    if (tree != NULL) {
+        printf("%d ", tree->number);
+        preOrderTraversal(tree->left);
+        preOrderTraversal(tree->right);
+    }
+}
+
+void postOrderTraversal(t_bst *tree) {
+    if (tree != NULL) {
+        postOrderTraversal(tree->left);
+        postOrderTraversal(tree->right);
+        printf("%d ", tree->number);
+    }
+}
+
 t_bst *search(t_bst *tree, int number) {
     if (tree->number == number) {
         return tree;
