@@ -13,14 +13,19 @@ int main() {
         push(&tree, nbr[i]);
     }
 
-    found_node = search(tree, 91);
-    printf("%d\n", found_node->number);
-    printf("\n===============\n");
-    inOrderTraversal(tree);
-    printf("\n===============\n");
-    preOrderTraversal(tree);
-    printf("\n===============\n");
-    postOrderTraversal(tree);
-    printf("\n");
+    printf("Before invert\n");
+    printf("root: %d\n", tree->number);
+    printf("left: %d\n", tree->left->number);
+    printf("right: %d\n", tree->right->number);
+
+    invertTree(&tree);
+    printf("After invert\n");
+    printf("root: %d\n", tree->number);
+    printf("left: %d\n", tree->left->number);
+    printf("left left: %d\n", tree->left->left->number);
+    printf("left left left: %d\n", tree->left->left->left->number);
+    printf("left left left right: %d\n", tree->left->left->left->right->number);
+    printf("right: %d\n", tree->right->number);
+
     return 0;
 }

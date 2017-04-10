@@ -2,6 +2,18 @@
 #include <stdlib.h>
 #include "BST.h"
 
+void invertTree(t_bst **tree) {
+    if (*tree != NULL) {
+        t_bst *tmp = (*tree)->left;
+
+        (*tree)->left = (*tree)->right;
+        (*tree)->right = tmp;
+
+        invertTree(&(*tree)->left);
+        invertTree(&(*tree)->right);
+    }
+}
+
 void push(t_bst **tree, int number) {
     t_bst *new_node = NULL;
 
