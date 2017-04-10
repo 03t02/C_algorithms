@@ -139,7 +139,7 @@ struct bst *search(struct bst *tree, int number) {
 # Invert Tree
 Inspired from **Max Howell**'s [tweet](https://twitter.com/mxcl/status/608682016205344768).
 
-The algorithm to solve this problem is pretty simple. All you have to do is exchange the left and right pointer recursively.
+The algorithm to solve this problem is pretty simple. All you have to do is swap the left and right pointer recursively.
 
 The time complexity of this algorithm is **O(h)** where **h** is the **height** of the tree.
 
@@ -176,7 +176,6 @@ void invertTree(t_bst **tree) {
 
 int main() {
     t_bst *tree = NULL;
-    t_bst *found_node = malloc(sizeof(*found_node));
 
     int nbr[12] = {54, 65 ,87 ,23, 77, 32, 13, 53, 98, 34, 84, 91};
 
