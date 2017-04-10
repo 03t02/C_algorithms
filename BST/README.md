@@ -136,6 +136,29 @@ struct bst *search(struct bst *tree, int number) {
 }
 ```
 
+# Invert Tree
+Inspired from **Max Howell**'s [tweet](https://twitter.com/mxcl/status/608682016205344768).
+
+The algorithm to solve this problem is pretty simple. All you have to do is exchange the left and right pointer recursively.
+
+The time complexity of this algorithm is **O(h)** where **h** is the **height** of the tree.
+
+##### C implementation
+```C
+void invertTree(t_bst **tree) {
+    if (*tree != NULL) {
+        t_bst *tmp = (*tree)->left;
+
+        (*tree)->left = (*tree)->right;
+        (*tree)->right = tmp;
+
+        invertTree(&(*tree)->left);
+        invertTree(&(*tree)->right);
+    }
+}
+```
+
+
 # The complexity in Big O Notation
 ###### Time Complexity
 | Type       | Best case | Average case | Worst case |
