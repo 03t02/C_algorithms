@@ -146,6 +146,11 @@ struct bst *search(struct bst *tree, int number) {
 
 # Example
 ```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "BST.h"
+
 int main() {
     t_bst *tree = NULL;
     t_bst *found_node = malloc(sizeof(*found_node));
@@ -156,27 +161,35 @@ int main() {
         push(&tree, nbr[i]);
     }
 
-    found_node = search(tree, 91);
-    printf("%d\n", found_node->number);
-    printf("\n===============\n");
-    inOrderTraversal(tree);
-    printf("\n===============\n");
-    preOrderTraversal(tree);
-    printf("\n===============\n");
-    postOrderTraversal(tree);
-    printf("\n");
+    printf("Before invert\n");
+    printf("root: %d\n", tree->number);
+    printf("left: %d\n", tree->left->number);
+    printf("right: %d\n", tree->right->number);
+
+    invertTree(&tree);
+    printf("After invert\n");
+    printf("root: %d\n", tree->number);
+    printf("left: %d\n", tree->left->number);
+    printf("left left: %d\n", tree->left->left->number);
+    printf("left left left: %d\n", tree->left->left->left->number);
+    printf("left left left right: %d\n", tree->left->left->left->right->number);
+    printf("right: %d\n", tree->right->number);
+
     return 0;
 }
 ```
 
 ###### Output
 ```C
-91
-
-===============
-13 23 32 34 53 54 65 77 84 87 91 98
-===============
-54 23 13 32 53 34 65 87 77 84 98 91
-===============
-13 34 53 32 23 84 77 91 98 87 65 54
+Before invert
+root: 54
+left: 23
+right: 65
+After invert
+root: 54
+left: 65
+left left: 87
+left left left: 98
+left left left right: 91
+right: 23
 ```
