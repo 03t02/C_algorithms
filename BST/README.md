@@ -141,8 +141,6 @@ Inspired from **Max Howell**'s [tweet](https://twitter.com/mxcl/status/608682016
 
 The algorithm to solve this problem is pretty simple. All you have to do is swap the left and right pointer recursively.
 
-The time complexity of this algorithm is **O(h)** where **h** is the **height** of the tree.
-
 ##### C implementation
 ```C
 void invertTree(t_bst **tree) {
