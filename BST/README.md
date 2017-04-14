@@ -139,6 +139,8 @@ struct bst *search(struct bst *tree, int number) {
 # Invert Tree
 Inspired from **Max Howell**'s [tweet](https://twitter.com/mxcl/status/608682016205344768).
 
+![Max howell tweet](https://image.ibb.co/naUS6Q/Screen_Shot_2017_04_14_at_17_11_30.png)
+
 The algorithm to solve this problem is pretty simple. All you have to do is swap the left and right pointer recursively.
 
 ##### C implementation
