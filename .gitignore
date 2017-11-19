@@ -1,4 +1,11 @@
 **/*~
 **/*.swp
 **/*.o
-
+BST/bst
+Binary Search/binarySearch
+Double Linked List/ll
+Linear Search/linearSearch
+Linked List/ll
+Queue/queue
+Ring Buffer/ringBuffer
+Stack/stack
