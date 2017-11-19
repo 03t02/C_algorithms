@@ -23,3 +23,4 @@ With `100 000 000` elements in an sorted array. And we're searching for the numb
 | 0.000505     | 0.000008     |
 
 It seems not too much even with the `Linear Search` algorithm. But it is really significant if you have a billions of billions elements to search.
+
