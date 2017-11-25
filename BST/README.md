@@ -161,11 +161,11 @@ void invertTree(t_bst **tree) {
 
 # The complexity in Big O Notation
 ###### Time Complexity
-| Type       | Average case | Worst case |
-|------------|--------------|------------|
-| **Insert** | O(log n)     | O(n)       |
-| **Delete** | O(log n)     | O(n)       |
-| **Search** | O(log n)     | O(n)       |
+| Type       | Worst case |
+|------------|------------|
+| **Insert** | O(n)       |
+| **Delete** | O(n)       |
+| **Search** | O(n)       |
 
 # Example
 ```C

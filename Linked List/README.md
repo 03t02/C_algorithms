@@ -112,13 +112,11 @@ struct ll *searchNode(struct ll *list, int number) {
 
 # The complexity in Big O Notation
 ###### Time Complexity
-| Type            | Average case | Worst case |
-|-----------------|--------------|------------|
-| **Search**      | O(n)         | O(n)       |
-| **Insert**      | O(n)         | O(n)       |
-| **Delete**      | O(n)         | O(n)       |
-| **Insert head** | O(1)         | O(1)       |
-| **Delete head** | O(1)         | O(1)       |
+| Type            | Worst case |
+|-----------------|------------|
+| **Search**      | O(n)       |
+| **Insert**      | O(n)       |
+| **Delete**      | O(n)       |
 
 
 # Example

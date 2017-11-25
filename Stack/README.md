@@ -29,14 +29,14 @@ First we create a new node (`new_node`). We assign the number to our `new_node`.
 If our stack is `NULL` (empty). We assign our `new_node` to our stack, because it's the first element.
 
 ```C
-	*list = new_node;
+    *list = new_node;
 ```
 
 Otherwise, we add our `new_node` to the head of our list. Because we want to keep `O(1)` of time complexity.
 
 ```C
-	new_node->next = *list;
-	*list = new_node;
+    new_node->next = *list;
+    *list = new_node;
 ```
 
 ##### C implementation
@@ -93,11 +93,11 @@ struct stack *search(struct stack *list, int number) {
 
 # The complexity in Big O Notation
 ###### Time Complexity
-| Type       | Average case | Worst case |
-|------------|--------------|------------|
-| **Search** | O(n)         | O(n)       |
-| **Insert** | O(1)         | O(1)       |
-| **Delete** | O(1)         | O(1)       |
+| Type       | Worst case |
+|------------|------------|
+| **Search** | O(n)       |
+| **Insert** | O(1)       |
+| **Delete** | O(1)       |
 
 # Example
 ```C
