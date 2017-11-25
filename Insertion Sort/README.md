@@ -1,5 +1,4 @@
 # Insertion Sort
-```
 
 # The complexity in Big O Notation
 ###### Time Complexity
