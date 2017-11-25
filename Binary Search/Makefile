@@ -2,7 +2,7 @@ GCC = gcc
 
 RM = rm -f
 
-CFLAGS = -Wextra -Wall -Werror -pedantic --std=c99
+CFLAGS = -Wextra -Wall -Werror -pedantic --std=c11
 
 SRCS = main.c \
        binarySearch.c \
