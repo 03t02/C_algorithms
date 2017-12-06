@@ -9,9 +9,8 @@ int binarySearch(int *arr, int lIdx, int rIdx, int toFind) {
             return midIdx;
         } else if (arr[midIdx] > toFind) {
             return binarySearch(arr, lIdx, midIdx - 1, toFind);
-        } else if (arr[midIdx] < toFind) {
-            return binarySearch(arr, midIdx + 1, rIdx, toFind);
         }
+        return binarySearch(arr, midIdx + 1, rIdx, toFind);
     } else {
         if (arr[lIdx] == toFind) {
             return lIdx;
